@@ -10,20 +10,26 @@ namespace EGNValidation
 
         public static bool isEGNValid(string egn)
         {
+            if (egn == null)
+            {
+                throw new ArgumentNullException("egn");
+            }
+
             if (egn.All(e => Char.IsDigit(e)) == false)
             {
-                throw new InvalidOperationException("The EGN must contain only digits");
+                return false;
             }
 
             if (egn.Length != 10)
             {
-                throw new InvalidOperationException("The EGN must contain 10 digits.");
+                return false;
             }
 
             long EGN = long.Parse(egn);
-
+            
             long montDigits = EGN / 1000000;
             long month = montDigits % 100;
+
 
             if (month < 1 || month > 52)
             {

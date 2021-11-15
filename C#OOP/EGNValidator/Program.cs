@@ -64,10 +64,10 @@ namespace EGNValidation
             }
 
             DateTime dateTime = new DateTime(year, month, day);
-            
+
             while (true)
             {
-                Console.WriteLine("Input the region of birth");
+                Console.WriteLine("Въведете района");
                 regionOfBirth = Console.ReadLine();
 
                 try
@@ -92,7 +92,7 @@ namespace EGNValidation
                 {
                     break;
                 }
-                else if(personSex == "Female")
+                else if (personSex == "Female")
                 {
                     isMale = false;
                     break;

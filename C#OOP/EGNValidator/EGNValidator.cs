@@ -30,7 +30,6 @@ namespace EGNValidation
             long montDigits = EGN / 1000000;
             long month = montDigits % 100;
 
-
             if (month < 1 || month > 52)
             {
                 return false;
@@ -89,7 +88,7 @@ namespace EGNValidation
         }
 
 
-        string[] IEGNValidator.GenatateEGNS(DateTime birthDate, string region, bool isMale)
+        string[] IEGNValidator.GenerateEGNS(DateTime birthDate, string region, bool isMale)
         {
             return EGNValidator.GenerateEGNS(birthDate, region, isMale);
         }

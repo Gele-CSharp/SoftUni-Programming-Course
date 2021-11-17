@@ -6,7 +6,7 @@ namespace EGNValidation
     {
          bool isEGNValid(string egn);
 
-         string[] GenatateEGNS(DateTime birthDate, string region, bool isMale);
+         string[] GenerateEGNS(DateTime birthDate, string region, bool isMale);
         
     }
 }

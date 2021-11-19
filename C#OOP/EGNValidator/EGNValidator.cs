@@ -98,7 +98,7 @@ namespace EGNValidation
         {
             if (int.TryParse(input, out int day) == false)
             {
-                throw new InvalidOperationException("Invalid input!");
+                throw new ArgumentException("Invalid input!");
             }
 
             if (day < 1 || day > 31)
@@ -114,7 +114,7 @@ namespace EGNValidation
         {
             if (int.TryParse(input, out int month) == false)
             {
-                throw new InvalidOperationException("Invalid input!");
+                throw new ArgumentException("Invalid input!");
             }
 
             if (month < 1 || month > 12)
@@ -130,7 +130,7 @@ namespace EGNValidation
         {
             if (int.TryParse(input, out int year) == false)
             {
-                throw new InvalidOperationException("Invalid input!");
+                throw new ArgumentException("Invalid input!");
             }
 
             if (year < 1800 || year > 2099)
@@ -239,7 +239,7 @@ namespace EGNValidation
                     isValid = true;
                     break;
                 default:
-                    throw new InvalidOperationException("Invalid region!");
+                    throw new ArgumentException("Invalid region!");
             }
 
             return isValid;
@@ -370,7 +370,7 @@ namespace EGNValidation
                     end = 999;
                     break;
                 default:
-                    throw new InvalidOperationException("Invalid input!");
+                    throw new ArgumentException("Invalid input!");
                     
             }
 
